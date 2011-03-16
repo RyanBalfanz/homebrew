@@ -69,7 +69,7 @@ class Mongodb < Formula
         launchctl load -w ~/Library/LaunchAgents/org.mongodb.mongod.plist
 
     Or start it manually:
-        mongod run --config #{prefix}/mongod.conf
+        mongod run --rest --config #{prefix}/mongod.conf
     EOS
   end
 
@@ -95,6 +95,7 @@ EOS
   <array>
     <string>#{bin}/mongod</string>
     <string>run</string>
+    <string>--rest</string>
     <string>--config</string>
     <string>#{prefix}/mongod.conf</string>
   </array>
